@@ -1,0 +1,95 @@
+/* Spacing
+---------------------------------------------- */
+$space-xs: 5px;
+$space-sm: 10px;
+$space-md: 30px;
+$space-lg: 50px;
+$space-xl: 100px;
+
+/* Widths
+---------------------------------------------- */
+$width-xs: 200px;
+$width-sm: 440px;
+$width-md: 600px;
+$width-lg: 1100px;
+
+@mixin container {
+  max-width: $width-lg;
+  margin: auto;
+  padding: 0 $space-md;
+}
+
+/* Colors
+---------------------------------------------- */
+$black: #000;
+
+$gray-dark: #222;
+$gray-medium: #444;
+$gray-light: #aaa;
+$gray-faint: #aaa;
+
+$white: #FFF;
+
+/* Typography
+---------------------------------------------- */
+$font-family: 'Inter', sans-serif;
+
+$font-size-sm: 16px;
+$font-size-md: 20px;
+$font-size-lg: 24px;
+$font-size-xl: 36px;
+
+$line-height-sm: 1;
+$line-height-md: 1.5;
+$line-height-lg: 2;
+
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+
+@mixin h1 {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-md;
+
+  @media(min-width: $screen-md) {
+    font-size: $font-size-xl;
+  }
+}
+@mixin h2 {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-md;
+
+  @media(min-width: $screen-md) {
+    font-size: $font-size-lg;
+  }
+}
+@mixin h3 {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-md;
+
+  @media(min-width: $screen-md) {
+    font-size: $font-size-xl;
+  }
+}
+@mixin h4 {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-md;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+@mixin paragraph {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-lg;
+}
+
+/* Breakpoints
+---------------------------------------------- */
+$screen-xs: 400px;
+$screen-sm: 640px;
+$screen-md: 768px;
+$screen-lg: 1024px;
+$screen-xl: 1220px;
