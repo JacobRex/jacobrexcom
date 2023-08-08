@@ -12,7 +12,12 @@
           class="layer__component"
         />
         <Icon
-          class="layer__icon"
+          class="layer__icon-xs"
+          name="x"
+          @click="store.closeLayer"
+        />
+        <Icon
+          class="layer__icon-normal"
           name="arrow-left"
           @click="store.closeLayer"
         />
@@ -49,12 +54,31 @@ const store = useLayerStore()
 
   /* Icon
   -------------------------------------------- */
-  &__icon {
-    position: sticky;
-    top: $space-md;
-    flex: 0 0 auto;
-    margin: $space-md;
-    color: white;
+  &__icon-xs {
+    display: block;
+    order: -1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: $space-md;
+    color: gray-dark;
+
+    @media(min-width: $screen-xs) {
+      display: none;
+    }
+  }
+
+  &__icon-normal {
+    display: none;
+
+    @media(min-width: $screen-xs) {
+      display: block;
+      position: sticky;
+      top: $space-md;
+      flex: 0 0 auto;
+      padding: $space-md;
+      color: white;
+    }
   }
 }
 
@@ -65,7 +89,10 @@ const store = useLayerStore()
   opacity: 0;
 
   .layer__component {
-    transform: translateX(-$space-lg);
+    transform: translateY($space-lg);
+    @media(min-width: $screen-xs) {
+      transform: translateX(-$space-lg);
+    }
   }
 }
 
