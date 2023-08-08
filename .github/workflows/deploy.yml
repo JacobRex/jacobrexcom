@@ -1,0 +1,32 @@
+name: Production Deploy
+
+on:
+  push:
+    branches: [ main ]
+jobs:
+  deploy-build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+    - name: Get latest code
+      uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version-file: '.nvmrc'
+
+    - name: Install Deps
+      run: npm install
+
+    - name: npm run generate
+      run: npm run generate
+
+    - name: Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: revivallane.com
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: './dist/'
+        server-dir: 'public_html/jacobrex/'
