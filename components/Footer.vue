@@ -26,7 +26,6 @@
 <style lang="scss">
 .footer {
   margin-top: $space-lg;
-  padding: $space-lg 0;
   text-align: center;
   background: $gray-dark;
   
@@ -39,6 +38,7 @@
   &__container {
     @include container;
     max-width: $width-md;
+    padding: $space-lg 0;
 
     @media(min-width: $screen-lg) {
       padding: $space-xl 0;
@@ -67,6 +67,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
+    gap: $space-md;
+    padding: $space-md;
+
+    @media(min-width: $screen-md) {
+      flex-direction: row;
+    }
   }
 }
 </style>
