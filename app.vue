@@ -41,7 +41,7 @@ useHead({
     },
     {
       property: "og:image",
-      content: "images/portfolio/fluid-studies_hero.jpg",
+      content: "/images/portfolio/fluid-studies_hero.jpg",
     },
   ],
   link: [
@@ -67,6 +67,7 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
+  margin-top: 0;
   font-weight: $font-weight-semibold;
 }
 
