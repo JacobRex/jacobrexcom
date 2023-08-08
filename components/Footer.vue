@@ -9,7 +9,7 @@
       </p>
       <Button
         variant="overlay"
-        href="mailto:jacobrex+portfolio@gmail.com"
+        href="mailto:jacobrex+sayhello@gmail.com"
       >
         Say hello
       </Button>
