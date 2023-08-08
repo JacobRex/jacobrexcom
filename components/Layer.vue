@@ -61,7 +61,7 @@ const store = useLayerStore()
     top: 0;
     right: 0;
     padding: $space-md;
-    color: gray-dark;
+    color: $gray-dark;
 
     @media(min-width: $screen-xs) {
       display: none;
