@@ -14,5 +14,5 @@ export const clinkle = {
   tags: ['Web Design', 'Web Development', 'Prototype'],
   palette: ['#28B156', '#212121', '#909090'],
   year: '2014',
-  liveUrl: 'http://jacobrex.com/mockups/clinkle/'
+  liveUrl: 'http://jacobrex.com/legacy/mockups/clinkle/'
 } as portfolioItem

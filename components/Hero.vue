@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="hero__media">
-      <img class="hero__img" src="images/me.jpg" />
+      <img class="hero__img" src="/images/me.jpg" />
     </div>
   </div>
 </template>
