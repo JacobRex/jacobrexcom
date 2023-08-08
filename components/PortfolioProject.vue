@@ -81,7 +81,7 @@
 </template>
 
 <script lang="ts" setup>
-import { portfolioText } from '../composabls/portfolio'
+import { portfolioText } from '../composables/portfolio'
 
 defineProps({
   hero: {
@@ -97,25 +97,25 @@ defineProps({
     required: true,
   },
   content: {
-    type: Array,
+    type: Array as PropType<portfolioText[]>,
     required: true,
-  } as portfolioText[],
+  },
   year: {
     type: String,
     required: true
   },
   tags: {
-    type: Array,
+    type: Array as PropType<string[]>,
     required: true,
-  } as string[],
+  },
   palette: {
-    type: Array,
+    type: Array as PropType<string[]>,
     required: true,
-  } as string[],
+  },
   shots: {
-    type: Array,
+    type: Array as PropType<string[]>,
     required: true,
-  } as string[],
+  },
   liveUrl: {
     type: String
   }

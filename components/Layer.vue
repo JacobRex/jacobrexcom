@@ -12,7 +12,7 @@
           class="layer__component"
         />
         <Icon
-          class="layer__close-icon"
+          class="layer__icon"
           name="arrow-left"
           @click="store.closeLayer"
         />
@@ -28,8 +28,6 @@ const store = useLayerStore()
 </script>
 
 <style lang="scss" scoped>
-/* Layer
----------------------------------------------- */
 .layer {
   display: flex;
   position: fixed;
@@ -42,12 +40,16 @@ const store = useLayerStore()
   background: rgba(0, 0, 0, 0.8);
   cursor: pointer;
 
+  /* Component
+  -------------------------------------------- */
   &__component {
     flex: 1;
     cursor: default;
   }
 
-  &__close-icon {
+  /* Icon
+  -------------------------------------------- */
+  &__icon {
     position: sticky;
     top: $space-md;
     flex: 0 0 auto;

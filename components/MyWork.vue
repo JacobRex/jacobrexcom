@@ -23,7 +23,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import useLayerStore from "../stores/layer"
 import PortfolioProject from './PortfolioProject.vue'
 
@@ -40,12 +40,16 @@ function viewProject(id: string) {
 .my-work {
   margin: $space-xl 0;
 
+  /* Intro
+  -------------------------------------------- */
   &__intro {
     max-width: $width-sm;
     margin: 0 auto $space-md;
     text-align: center;
   }
 
+  /* Portfolio
+  -------------------------------------------- */
   &__portfolio {
     display: flex;
     flex-wrap: wrap;

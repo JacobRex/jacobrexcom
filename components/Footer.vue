@@ -14,7 +14,7 @@
         Say hello
       </Button>
     </div>
-    <div class="footer__foot">
+    <div class="footer__bottom">
       <Social class="footer__social" />
       <div class="footer__copyright">
         &copy; Jacob Rex
@@ -34,6 +34,8 @@
     margin-top: $space-xl;
   }
 
+  /* Container
+  -------------------------------------------- */
   &__container {
     @include container;
     max-width: $width-md;
@@ -43,18 +45,24 @@
     }
   }
 
+  /* Heading
+  -------------------------------------------- */
   &__heading {
     @include h2;
     margin-bottom: $space-md;
     color: $white;
   }
 
+  /* Text
+  -------------------------------------------- */
   &__text {
     margin-bottom: $space-md;
     color: $gray-light;
   }
 
-  &__foot {
+  /* Bottom
+  -------------------------------------------- */
+  &__bottom {
     @include container;
     display: flex;
     align-items: center;

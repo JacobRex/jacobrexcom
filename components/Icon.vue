@@ -12,7 +12,6 @@
 import { defineAsyncComponent } from 'vue'
 
 const props = defineProps({
-  /** The name of the icon to use */
   name: {
     type: String,
     required: true

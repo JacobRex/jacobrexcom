@@ -1,6 +1,6 @@
 <template>
   <component
-    :is="tag"
+    :is="element"
     :class="`button variant-${variant}`"
     :href="href"
   >
@@ -20,7 +20,7 @@ const props = defineProps({
   }
 })
 
-const tag = computed(() => {
+const element = computed(() => {
   return props.href ? 'a' : 'button' ;
 })
 </script>
@@ -43,6 +43,7 @@ const tag = computed(() => {
   text-decoration: none;
   cursor: pointer;
 
+  /* Variants ---------------------- */
   &.variant-normal {
     color: $gray-dark;
     border-color: $gray-dark;

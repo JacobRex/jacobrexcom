@@ -38,6 +38,8 @@ const socialMedia = [
   display: flex;
   gap: $space-md;
 
+  /* Link
+  -------------------------------------------- */
   &__link {
     color: currentColor;
   }

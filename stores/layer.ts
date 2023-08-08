@@ -1,17 +1,24 @@
 import { defineStore } from 'pinia'
 import { extend } from '@vue/shared'
 
+/* Typescript
+---------------------------------------------- */
 const component = extend({});
+
 type VueComponent = InstanceType<typeof component>;
+
 interface LayerProps {
   component: null | VueComponent;
   props?: object;
 }
+
 interface LayerState {
   layerState: LayerProps;
 }
-const initialState = { component: null, props: {} };
 
+/* Layering Code
+---------------------------------------------- */
+const initialState = { component: null, props: {} };
 
 export default defineStore('layer', {
   state: (): LayerState => ({ layerState: initialState }),
@@ -23,6 +30,5 @@ export default defineStore('layer', {
     closeLayer() {
       this.layerState = initialState;
     },
-  },
-  getters: {}
+  }
 });

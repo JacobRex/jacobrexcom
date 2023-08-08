@@ -1,7 +1,8 @@
 <template>
   <div class="app">
     <main class="main">
-      <NuxtPage />
+      <Hero />
+      <MyWork />
     </main>
     <Layer />
   <Footer />
