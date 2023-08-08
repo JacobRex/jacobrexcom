@@ -3,6 +3,7 @@
     <main class="main">
       <NuxtPage />
     </main>
+    <Layer />
   <Footer />
   </div>
 </template>

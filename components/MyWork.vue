@@ -9,26 +9,32 @@
       </p>
     </div>
     <div class="my-work__portfolio">
-      <NuxtLink
+      <img
         v-for="project in portfolio"
-        :key="project.name"
-        :to="project.route"
+        :key="project.id"
         :class="[
-          'my-work__portfolio-link',
+          'my-work__portfolio-img',
           `size-${project.size}`
         ]"
-      >
-        <img
-          :class="[
-            'my-work__portfolio-img',
-            `size-${project.size}`
-          ]"
-          :src="project.hero"
-        />
-      </NuxtLink>
+        :src="project.hero"
+        @click="viewProject(project.id)"
+      />
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import useLayerStore from "../stores/layer"
+import PortfolioProject from './PortfolioProject.vue'
+
+const store = useLayerStore();
+function viewProject(id: string) {
+  store.openLayer({
+    component: PortfolioProject,
+    props: portfolio.find(project => project.id === id)
+  });
+}
+</script>
 
 <style lang="scss">
 .my-work {
@@ -43,11 +49,15 @@
   &__portfolio {
     display: flex;
     flex-wrap: wrap;
-    gap: $space-lg;
+    gap: $space-md;
+
+    @media(min-width: $screen-md) {
+      gap: $space-lg;
+    }
   }
 
-  &__portfolio-link {
-    font-size: 0;
+  &__portfolio-img {
+    cursor: pointer;
 
     &.size-small {
       width: 100%;
@@ -60,11 +70,6 @@
     &.size-large {
       width: 100%;
     }
-  }
-
-  &__portfolio-img {
-    width: 100%;
-    cursor: pointer;
   }
 }
 </style>

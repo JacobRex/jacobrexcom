@@ -126,8 +126,11 @@ defineProps({
 .portfolio-project {
   display: flex;
   flex-direction: column;
-  gap: $space-lg;
-  
+  width: 80%;
+  max-width: $width-lg;
+
+  /* Hero
+  -------------------------------------------- */
   &__hero {
     width: 100%;
   }
@@ -138,9 +141,12 @@ defineProps({
     display: flex;
     flex-direction: column;
     gap: $space-lg;
+    padding: $space-md;
+    background: white;
 
     @media(min-width: $screen-md) {
       flex-direction: row;
+      padding: $space-lg;
     }
   }
 
@@ -166,8 +172,6 @@ defineProps({
     margin-top: $space-lg;
     color: $gray-light;
   }
-
-  &__paragraph {}
 
   &__button {
     margin-top: $space-md;
@@ -216,7 +220,14 @@ defineProps({
   &__shots {
     display: flex;
     flex-wrap: wrap;
-    gap: $space-lg;
+    gap: $space-md;
+    padding: $space-md;
+    background: white;
+
+    @media(min-width: $screen-md) {
+      gap: $space-lg;
+      padding: $space-lg;
+    }
   }
 
   &__shot {
