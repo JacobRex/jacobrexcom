@@ -126,8 +126,11 @@ defineProps({
 .portfolio-project {
   display: flex;
   flex-direction: column;
-  width: 80%;
   max-width: $width-lg;
+
+  @media(min-width: $screen-xs) {
+    width: 80%;
+  }
 
   /* Hero
   -------------------------------------------- */
