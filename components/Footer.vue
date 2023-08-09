@@ -5,7 +5,7 @@
         Let's team up
       </h2>
       <p class="footer__text">
-        For over 15 years, I have assisted companies in achieving growth, designing & launching their products, and bringing their websites to life. Let's explore how I can contribute to your idea.
+        In my career, I've driven company growth, designed & launched products, and breathed life into ideas. Let's discover how I can enhance your next project.
       </p>
       <Button
         variant="overlay"
@@ -38,10 +38,10 @@
   &__container {
     @include container;
     max-width: $width-md;
-    padding: $space-lg 0;
+    padding: $space-lg $space-md;
 
     @media(min-width: $screen-lg) {
-      padding: $space-xl 0;
+      padding: $space-xl $space-md;
     }
   }
 
