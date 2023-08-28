@@ -25,6 +25,7 @@ export interface portfolioItem {
 import { fluidStudies } from "./portfolio/fluid-studies"
 import { revivalLane } from "./portfolio/revival-lane"
 import { regionalNDT } from "./portfolio/regional-ndt"
+import { orbit } from "./portfolio/orbit"
 import { square } from "./portfolio/square"
 import { weeblyLandingPage } from "./portfolio/weebly-landing-page"
 import { weeblyHomepage } from "./portfolio/weebly-homepage"
@@ -37,6 +38,7 @@ export const portfolio = [
   fluidStudies,
   revivalLane,
   regionalNDT,
+  orbit,
   square,
   weeblyLandingPage,
   weeblyHomepage,
